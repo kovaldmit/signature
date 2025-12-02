@@ -21,7 +21,7 @@ class Signature
     {
         $path = parse_url($url, PHP_URL_PATH);
         $len = strlen($path);
-        if ($len == 0 || '/' == $path{$len - 1}) {
+        if ($len == 0 || '/' == $path[$len - 1]) {
             return "";
         }
 
